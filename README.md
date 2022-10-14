@@ -35,9 +35,9 @@ Here is a list of resources about account abstraction:
 
 ## How to send your submission
 
-To send a submissions, just fork this repo and create a PR with your changes. You shoyld create your own subfolder inside `/submissions` (make sure to give it a unique name). You submissions should contain the following files and information:
+To send a submissions, just fork this repo and create a PR with your changes. You should create your own subfolder inside `/submissions` (make sure to give it a unique name). Your submissions should contain the following files and information:
 
-- `README.md`: with a description of your project, requirements, installation guide, and how to run it.
+- `README.md`: with a description of your project, requirements, installation guide, and how to run it. You can also record a video and upload to Youtube. Although that's optional, it'll be a nice touch 😉
 - `About.md`: include here information about yourself and how to contact you.
 - `/code`: create a subfolder with all the code of your submissions.
 

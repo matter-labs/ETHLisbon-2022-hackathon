@@ -29,7 +29,7 @@ We'll reward the best / most creative uses of this feature and we're giving you 
 Here is a list of resources about account abstraction:
 
 - zkSync v2 account abstraction support: [zkSync docs](https://v2-docs.zksync.io/dev/developer-guides/transactions/aa.html)
-- WTF is account abstraction: [Argent blog](https://www.argent.xyz/blog/wtf-is-account-abstraction/)
+- WTF is account abstraction @ Argent blog: [part 1](https://www.argent.xyz/blog/wtf-is-account-abstraction/), [part 2](https://www.argent.xyz/blog/part-2-wtf-is-account-abstraction/) and [part 3](https://www.argent.xyz/blog/part-3-wtf-is-account-abstraction/)
 - Creating a multisig wallet tutorial: [zkSync docs](https://v2-docs.zksync.io/dev/tutorials/custom-aa-tutorial.html)
 - Paymasters: [zkSync docs](https://v2-docs.zksync.io/dev/developer-guides/transactions/aa.html#paymasters)
 

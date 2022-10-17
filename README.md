@@ -43,10 +43,18 @@ To send a submissions, just fork this repo and create a PR with your changes. Yo
 
 ## FAQs
 
+> Do I have to provide my personal details?
+
+No, just enough information to contact you. It could be an email address, Twitter handle, Telegram, etc.
+
 > Can I choose to get paid in crypto?
 
 Yes. We can pay you in crypto via zkSync.
 
-> Do I have to provide my personal details?
+> Will there be any support from Matter Labs during the hackathon?
 
-No, just enough information to contact you. It could be an email address, Twitter handle, Telegram, etc.
+We will create a specific channel in our [Discord server](https://discord.com/invite/px2aR7w) where all teams can reach out and ask questions.
+
+> Who and how will you choose the winners?
+
+Multiple members from different teams inside Matter Labs will vote and choose the projects they like most. The top three will be the winners.

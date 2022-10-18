@@ -2,13 +2,11 @@
 
 ![](./zksync-head.png)
 
-> ⚠️ **This document is in progress and changes are being applied**
-
 In this repository you'll find all the information you need to participate in the zkSync track of ETHLisbon 2022 Hackathon.
 
 ## Dates
 
-ETH Lisbon kicks-off on October 28th. Although the official hackathon ends on 30th October, we've decided to extend the submission period a few more days (final date to be decided).
+ETH Lisbon kicks-off on October 28th. Although the official hackathon ends on 30th October, we've decided to extend the submission period a few more days. Teams an individuals will be allowed to send submissions (following [the process detailed below](#how-to-send-your-submission)) until the end of November 4th. Winners will be announced on November 11th in our Discord and Twitter.
 
 ## Who can participate?
 
@@ -16,7 +14,7 @@ Anyone can participate, no matter if you're attending ETHLisbon in person or not
 
 ## Prizes
 
-TBD
+The top three projects will receive a prize amount of $1000 for a total of $3000 in bounties.
 
 ## Bounty
 
@@ -58,3 +56,7 @@ We will create a specific channel in our [Discord server](https://discord.com/in
 > Who and how will you choose the winners?
 
 Multiple members from different teams inside Matter Labs will vote and choose the projects they like most. The top three will be the winners.
+
+### Disclaimer
+
+**This document is a work in progress so changes may be applied**

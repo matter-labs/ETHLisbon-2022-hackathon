@@ -1,6 +1,6 @@
 # ETHLisbon 2022 Hackathon
 
-![](./zksync-head.png)
+![](./zksync-head-pt.png)
 
 In this repository you'll find all the information you need to participate in the zkSync track of ETHLisbon 2022 Hackathon.
 

@@ -1,1 +1,2 @@
-akamo: https://twitter.com/akamo778
+twitter: https://twitter.com/akamo778
+discord: Ryo#2410

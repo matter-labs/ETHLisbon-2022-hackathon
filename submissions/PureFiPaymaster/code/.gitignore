@@ -1,0 +1,10 @@
+node_modules
+artifacts-zk
+cache-zk
+
+cache
+typechain-types
+network_keys
+package-lock.json
+.DS_store
+*.log

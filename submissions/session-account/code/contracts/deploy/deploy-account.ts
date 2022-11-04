@@ -13,7 +13,7 @@ const ACCOUNT_DEPLOYMENT_SALT =
   process.env.ACCOUNT_DEPLOYMENT_SALT ?? (ethers.constants.HashZero as string);
 
 export default async function (hre: HardhatRuntimeEnvironment) {
-  const provider = new Provider(hre.config.zkSyncDeploy.zkSyncNetwork);
+  const provider = new Provider((hre.config as any).zkSyncDeploy.zkSyncNetwork);
   const wallet = new Wallet(DEPLOYER_PRIVATE_KEY).connect(provider);
   const ownerAddress = ACCOUNT_OWNER_ADDRESS;
   const factoryArtifact = await hre.artifacts.readArtifact("AccountFactory");

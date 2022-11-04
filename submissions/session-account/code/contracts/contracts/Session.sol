@@ -31,7 +31,7 @@ contract Session is Ownable {
 
     mapping(address => SessionInfo) public sessions;
 
-    function creteSession(address signer, address[] memory newAddrs) external onlyOwner {
+    function createSession(address signer, address[] memory newAddrs) external onlyOwner {
         sessions[signer].version += 1;
 
         uint256 version = sessions[signer].version;

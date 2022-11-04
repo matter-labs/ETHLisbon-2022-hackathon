@@ -2,9 +2,9 @@
 
 Original codebase is derived from the "Build a custom paymaster" tutorial from the [zkSync v2 documentation](https://v2-docs.zksync.io/dev/).
 
-The idea of the Paymaster is inspired by the [PureFiContext](https://github.com/purefiprotocol/sdk-solidity/blob/master/contracts/PureFiContext.sol) contract, which is following OpenZeppelin re-entrancy guard contract design approach. Meaning that it is setting context storage variables before target Tx starts, and erases after it finishes. 
+The idea of the Paymaster is inspired by the [PureFiContext](https://github.com/purefiprotocol/sdk-solidity/blob/master/contracts/PureFiContext.sol) contract, which is following OpenZeppelin re-entrancy guard contract design approach. Meaning that it is setting context storage variables before target Tx starts, and erases after it finishes.
 
-[PureFiContext](https://github.com/purefiprotocol/sdk-solidity/blob/master/contracts/PureFiContext.sol) itself is the part of the PureFi protocol implementation which delivers AML (Anti-money laundering) verification data into the smart contract, thus allowing smart contract designers and operators take the decision either to accept or to block incoming funds (due to a high risk associated with the address or transaction, for example). PureFi makes use of the so called Rules (identified by RuleID), which associates the identifier (ruleID) with the explisit verification that is 
+[PureFiContext](https://github.com/purefiprotocol/sdk-solidity/blob/master/contracts/PureFiContext.sol) itself is the part of the PureFi protocol implementation which delivers AML (Anti-money laundering) verification data into the smart contract, thus allowing smart contract designers and operators take the decision either to accept or to block incoming funds (due to a high risk associated with the address or transaction, for example). PureFi makes use of the so called Rules (identified by RuleID), which associates the identifier (ruleID) with the explisit verification that is
 performed on the PureFi Issuer side. This process is typically initiated by the front-end (dApp), then verification is performed and signed package is provided to be used by the dApp to convince Smart contract that required veficication was performed, and it can accept funds. The detailed guide and description can be found [here](https://docs.purefi.io/integrate/products/aml-sdk/interactive-mode)
 
 [PureFiPaymaster](./contracts/PureFiPaymaster.sol) accepts signed packages issued by the PureFi issuer within the Paymaster payload
@@ -37,22 +37,31 @@ These variables could be then queried by the target smart contract [FilteredPool
         require(ruleID == expectedDepositRuleID, "Invalid ruleID provided");
         require(msg.sender == verifiedUser, "Invalid verifiedUser provided");
         _deposit(_amount, _to);
-       
+
     }
-``` 
+```
 > contextHolder in the code above is actually the PureFiPaymaster contract.
 
-This way the smart contract can be sure that funds and the sender address were verified according to the ruleID expected, and thus, it's safe to accept these funds from the user. 
+This way the smart contract can be sure that funds and the sender address were verified according to the ruleID expected, and thus, it's safe to accept these funds from the user.
 
 ## Deployment and usage
 
 > complete deployment and test requires about 0.03 ETH
 
+create a folder `network_keys` inside the project folder and put a file `secrets.json` into this folder. The structure of the secrets file is the following:
+```
+{
+    "mnemonic": "YOUR MNEMONIC HERE",
+    "infuraApiKey": "<YOUR API KEY HERE>",
+    "privateKey" : "YOUR MAIN WALLET PK HERE, WITH SOME BALANCE IN ZKSYNC TESTNET"
+}
+```
+
 Compiling and deployment is performed by the following script:
 - `redeploy.sh`
 
 the test is performed by the following command:
-- `yarn hardhat deploy-zksync --script use-paymaster-modified.ts`: 
+- `yarn hardhat deploy-zksync --script use-paymaster-modified.ts`:
 
 ## Testing flow
 1. ERC20, FilteredPool and PureFiPaymaster are deployed
@@ -61,11 +70,4 @@ the test is performed by the following command:
 3. deposit tx is issued from emptyWallet to FilteredPool. ERC20 tokens are transferred from emptyWallet to FilteredPool, totalCap is encreased. 
 3. withdraw tx is issued from emptyWallet to FilteredPool. ERC20 tokens are transferred from FilteredPool to emptyWallet, totalCap is decreased.
 
-Important: deposit and withdraw operations are using different PureFi rules (which is usually the case in real life)
-
-## Author
-
-Miha Tiutin, CTO @ PureFi. 
-contact: miha.tiutin@purefi.io
-telegram: @mtiutin
-ZkSync address: 0x13a8CB7f655162F468B2Bc4CD209c22704C9925A
+*Important:* deposit and withdraw operations are using different PureFi rules (which is usually the case in real life)

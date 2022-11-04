@@ -70,11 +70,4 @@ the test is performed by the following command:
 3. deposit tx is issued from emptyWallet to FilteredPool. ERC20 tokens are transferred from emptyWallet to FilteredPool, totalCap is encreased. 
 3. withdraw tx is issued from emptyWallet to FilteredPool. ERC20 tokens are transferred from FilteredPool to emptyWallet, totalCap is decreased.
 
-Important: deposit and withdraw operations are using different PureFi rules (which is usually the case in real life)
-
-## Author
-
-Miha Tiutin, CTO @ PureFi. 
-contact: miha.tiutin@purefi.io
-telegram: @mtiutin
-ZkSync address: 0x13a8CB7f655162F468B2Bc4CD209c22704C9925A
+*Important:* deposit and withdraw operations are using different PureFi rules (which is usually the case in real life)

@@ -63,5 +63,4 @@ Finally, delete the session.
 
 ```
 yarn workspace contracts hardhat run scripts/delete-session.ts
-
 ```

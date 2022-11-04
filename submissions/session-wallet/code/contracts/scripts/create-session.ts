@@ -27,7 +27,6 @@ async function main() {
   const tx = await account.createSession(sessionWallet.address, []);
   await tx.wait();
 
-  console.log(tx);
   console.log(`Successfully session created! Tx URL: https://explorer.zksync.io/tx/${tx.hash}`);
 }
 

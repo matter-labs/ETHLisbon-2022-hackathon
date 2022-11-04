@@ -24,5 +24,5 @@ export default async function (hre: HardhatRuntimeEnvironment) {
     ]
   );
 
-  console.log(`AA factory address: ${factory.address}`);
+  console.log(`Deployment AccountFactory succeeded! ACCOUNT_FACTORY_ADDRESS: ${factory.address}`);
 }

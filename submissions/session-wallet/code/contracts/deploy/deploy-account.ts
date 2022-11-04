@@ -38,5 +38,5 @@ export default async function (hre: HardhatRuntimeEnvironment) {
     abiCoder.encode(["address"], [ownerAddress])
   );
 
-  console.log(`Account deployed on address ${accountAddress}`);
+  console.log(`Deployment AccountFactory succeeded! ACCOUNT_ADDRESS: ${accountAddress}`);
 }

@@ -27,7 +27,6 @@ async function main() {
   const tx = await account.deleteSession(sessionWallet.address);
   await tx.wait();
 
-  console.log(tx);
   console.log(`Successfully session deleted! Tx URL: https://explorer.zksync.io/tx/${tx.hash}`);
 }
 

@@ -18,10 +18,12 @@ Now you can open your wallet once and focus on your game the rest of the time.
 
 ## Deploy contracts
 
-Execute the following command to create .env file
+Execute the following command to setup
 
 ```
+yarn install
 yarn workspace contracts setup
+yarn workspace contracts hardhat compile
 ```
 
 Then, set the following environment variables
@@ -45,9 +47,6 @@ yarn workspace contracts deploy:account
 
 The address of the deployed Account contract will be displayed on your terminal, copy it to ACCOUNT_ADDRESS in the .env file.
 
-
-That's all.
-
 ## Running Sample Scripts
 
 After deployment is complete, you can run the following sample script to create a session and send transactions by the session.
@@ -63,4 +62,10 @@ Finally, delete the session.
 
 ```
 yarn workspace contracts hardhat run scripts/delete-session.ts
+```
+
+If you retransfer by old session, some error will occur.
+
+```
+yarn workspace contracts hardhat run scripts/transfer-by-session.ts
 ```

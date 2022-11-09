@@ -1,0 +1,29 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+.idea
+yarn.lock
+
+#Hardhat files
+cache
+cache-zk
+artifacts
+artifacts-zk/
+
+
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+
+#Hardhat files
+cache
+artifacts
+
+# Deployment secrets
+.secrets.json
